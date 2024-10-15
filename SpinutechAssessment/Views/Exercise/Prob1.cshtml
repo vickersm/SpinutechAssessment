@@ -1,0 +1,17 @@
+﻿@page "/DisputePoints/"
+@model NumericConversion
+
+@{
+    ViewData["Title"] = "Exercise 1";
+}
+
+<h2>Exercise 1</h2>
+<h4>Convert numeric to readable string</h4>
+
+@using (Html.BeginForm("OnPost", "NumericConverter", FormMethod.Post))
+{
+    <p>
+        Input Number: @Html.NumberTextBoxFor(x => x.Model.Email, autocomplete: "email")
+    </p>    
+    <input type="submit" value="Log On" />
+}
